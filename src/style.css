@@ -1,0 +1,226 @@
+/* Базовые настройки темы */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #1a2e26; /* Уютный хвойно-зеленый фон лавки */
+  color: #f1f5f9;
+  user-select: none;
+}
+
+/* Контейнер игры */
+.game-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* МИНИМАЛИСТИЧНАЯ УЗКАЯ ШАПКА */
+header {
+  background-color: #111c17;
+  border: 1px solid #2d4a3e;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 16px;
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.header-vitals-inline {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  max-width: 450px;
+  margin: 0 24px;
+}
+
+.vital-bar-group {
+  flex: 1;
+}
+
+.bar-label-inline {
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.bar-outer {
+  background-color: #0d1411;
+  border: 1px solid #334155;
+  height: 8px; /* Тонкие полоски */
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar-inner {
+  height: 100%;
+  transition: width 0.2s ease;
+}
+.bg-hp { background-color: #ef4444; }
+.bg-mp { background-color: #3b82f6; }
+
+.header-info-inline {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Игровая сетка (3 колонки) */
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 850px) {
+  .game-grid { 
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* Универсальные карточки для зон интерфейса */
+section {
+  background-color: #18221f;
+  border: 1px solid #2d4a3e;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #2d4a3e;
+  padding-bottom: 6px;
+  color: #e2e8f0;
+}
+
+/* Кнопки */
+button {
+  background-color: #243e33;
+  color: #34d399;
+  border: 1px solid #34d399;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+button:hover:not(:disabled) {
+  background-color: #34d399;
+  color: #111c17;
+}
+button:disabled {
+  border-color: #4b5563;
+  color: #4b5563;
+  background-color: transparent;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.market-table tr {
+  margin-bottom: 4px;
+  display: table;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #111c17;
+  box-sizing: border-box;
+}
+.market-table td {
+  padding: 8px;
+}
+
+.pantry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.pantry-item {
+  border: 1px solid #2d4a3e;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Элементы котла */
+.slots-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+.cauldron-slot {
+  width: 85px;
+  height: 85px;
+  border: 2px dashed #4b5563;
+  background-color: #111c17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.log-box {
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #2d4a3e;
+  background-color: #111c17;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+/* Списки */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  background-color: #111c17;
+}
+
+/* Черга покупців */
+
+.btn-sell-action {
+  flex: 1;
+  background-color: #d97706;
+  border-color: #f59e0b;
+  color: #fff;
+}
+.btn-sell-action:hover {
+  background-color: #f59e0b;
+  color: #111c17;
+}
+
+/* Экран смерти */
+.death-screen {
+  background-color: #2d1414;
+  border: 2px solid #ef4444;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+}
